@@ -25,6 +25,7 @@ admin.site.index_title    = 'myapi administration'
 admin.empty_value_display = '**Empty**'
 
 urlpatterns = [
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^swagger/$', schema_view),
     url(r'^admin/', admin.site.urls),
     url(r'^item/', include('item.urls',namespace="item")),
