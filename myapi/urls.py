@@ -25,7 +25,7 @@ admin.site.index_title    = 'myapi administration'
 admin.empty_value_display = '**Empty**'
 
 urlpatterns = [
-    url(r'^$', schema_view),
+    url(r'^swagger/$', schema_view),
     url(r'^admin/', admin.site.urls),
     url(r'^item/', include('item.urls',namespace="item")),
     url(r'^set/', include('set.urls',namespace="set")),
