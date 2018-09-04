@@ -38,10 +38,3 @@ class GroupRetrieveView(RetrieveAPIView):
     serializer_class       = GroupSerializer
     permission_classes     = (IsAuthenticated,)
     queryset               = Group.objects.all()
-        
-    # def get(self, request, format=None):
-    #     content = {
-    #         'user': str(request.user),  # `django.contrib.auth.User` instance.
-    #         'auth': str(request.auth),  # None
-    #     }
-    #     return Response(content)
